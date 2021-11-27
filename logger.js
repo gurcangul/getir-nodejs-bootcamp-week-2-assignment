@@ -26,7 +26,7 @@ const server = http.createServer((req,res)=>{
         writeLogger(logObj);
     } else {// capture the request that not exist pages
         res.writeHead(404);// sets the HTTP status code of the response  404 means 'not found'
-        res.write('<h1>404 FOUND!</h1> \nThat Page does not exist.');
+        res.write('<h1>404</h1> \n Page not found!');
         res.end();
         writeLogger('Request for not exist page');   // If the page does not exist   
       }       
